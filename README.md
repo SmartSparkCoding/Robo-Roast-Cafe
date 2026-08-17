@@ -23,6 +23,22 @@ _look at the cool ascii art_
 
 I recently completed a basic python course, and wanted to really test out my skills, no AI at all. And the idea for a robot barista comes from NetworkChuck's Python Right Now series (modified tho you can check it out). This allows me to mess with while loops, types of data, print, input, variables affecting outputs etc etc!
 
+## Installation Instructions
+
+1. Download Robo-Roast.Cafe file in the latest release!
+2. Open your Mac's Terminal.
+3. Navigate to where you downloaded the file. Normally this is: `cd ~/Downloads`
+4. Make the file executable with: `chmod +x "Robo-Roast.Cafe"`
+5. Run the file:  `./"Robo-Roast.Cafe"`
+
+### Warning to Mac Users
+
+If the file won't run, probably for security reasons, run this command to trust the file.
+
+`xattr -d com.apple.quarantine "Robo-Roast.Cafe"`
+
+You do NOT need python installed! 
+
 ## The 'Ann-Droid' Easter Egg
 
 Inside of the code, if you type your name as:
