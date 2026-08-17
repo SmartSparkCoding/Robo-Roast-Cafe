@@ -92,7 +92,21 @@ drink_order = drink_order - 1
 
 number_of_drinks = int(input("How many " + drinks[drink_order] + "s would you like?\n"))
 
-total = drinks_prices[drink_order] * number_of_drinks
+extra_milk_ask = input("Would you like extra milk? (y/n)\n")
+if extra_milk_ask == "y":
+    extra_milk = 1
+else:
+    extra_milk = 0
+
+extra_sugar_ask = input("Would you like extra sugar? (y/n)\n")
+if extra_sugar_ask == "y":
+    extra_sugar = 1
+else:
+    extra_sugar = 0
+
+user_drink_price = drinks_prices[drink_order] + extra_milk + extra_sugar
+
+total = user_drink_price * number_of_drinks
 
 extra_item = random.randint(0, 5)
 
