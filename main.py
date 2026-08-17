@@ -113,3 +113,39 @@ while food_item_confirm_while == False:
     else: 
         print("Looks like you didn't say that right!")
 
+print("Right, you must be hungry! Let me show you the full shop!")
+
+food = extra_item_list + ["toastie", "biscoff", "KitKat", "cheese sandwhich"]
+food_prices = extra_item_prices + [4.50, 1.00, 1.00, 3.50]
+
+food_number_track = -1
+
+for item in food:
+    food_number_track = food_number_track + 1
+    print(str(food_number_track + 1) + ". " + item + " ---> £" + str(food_prices[food_number_track]))
+
+food_choice = int(input("Which number of food would you like?\n"))
+
+food_choice = food_choice - 1
+
+food_amount = int(input("How many " + food[food_choice] + "s would you like?\n"))
+
+food_subtotal = food_prices[food_choice] * food_amount
+total = total + food_subtotal
+
+print("\n")
+
+print("Ok - so looking at your order, you have:")
+print(str(number_of_drinks) + " " + drinks[drink_order] + drinks_suffix)
+if extra_item_amount > 1:
+    extra_item_suffix = "s"
+else:
+    extra_item_suffix = ""
+print(str(extra_item_amount) + extra_item_list[extra_item] + extra_item_suffix)
+if food_amount > 1:
+    food_suffix = "s"
+else:
+    food_suffix = ""
+print("and" + str(food_amount) + food[food_choice] + food_suffix)
+
+payment(total)
