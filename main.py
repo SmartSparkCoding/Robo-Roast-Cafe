@@ -1,5 +1,14 @@
 import random
 
+def payment_accepted():
+    print("")
+    print("████   ███  █   █ █   █ █████ █   █ █████     ███   ███   ███  █████ ████  █████ █████ ████ ") 
+    print("█   █ █   █  █ █  ██ ██ █     ██  █   █      █   █ █     █     █     █   █   █   █     █   █ ")
+    print("████  █████   █   █ █ █ ████  █ █ █   █      █████ █     █     ████  ████    █   ████  █   █ ")
+    print("█     █   █   █   █   █ █     █  ██   █      █   █ █     █     █     █       █   █     █   █ ")
+    print("█     █   █   █   █   █ █████ █   █   █      █   █  ███   ███  █████ █       █   █████ ████  ")
+    print("")
+
 def payment(total):
     print("========== £" + str(total) + " ==========")
     print("How would you like to pay?\n")
@@ -13,27 +22,32 @@ def payment(total):
         if payment_choice >= 1 and payment_choice <= 4:
             if payment_choice == 1 or payment_choice == 2:
                 print("Just tap here please!")
+                payment_accepted()
                 print("Thank you - here are your items!!\n Thanks for visiting!")
                 exit()
             elif payment_choice == 3:
                 total = total + 2
                 print("So because you chose cash, your new total is £" + str(total) + "!")
-                print("Thank you for your payment - Thanks for visiting!!")
+                payment_accepted()
+                print("Thanks for visiting!!")
                 exit()
             else: 
-                print("Well - its great you are part of Hack Club! ")
-                print("Have your order for free! Thanks for visiting!")
+                print("Well - its great you are part of Hack Club! It is free for you!")
+                payment_accepted()
+                print("Thanks for visiting!")
                 exit()
         else:
             print("Thats not a valid option of payment!")
 
 # welcome message with equals - might do ascii art in future maybe?
 
-print("===============================")
-print("===============================")
-print("  Welcome to Robo-Roast Cafe!  ")
-print("===============================")
-print("===============================")
+print("")
+print("▓▓▓▓   ▓▓▓  ▓▓▓▓   ▓▓▓       ▓▓▓▓   ▓▓▓   ▓▓▓   ▓▓▓▓ ▓▓▓▓▓     ▓▓▓   ▓▓▓  ▓▓▓▓▓ ▓▓▓▓▓")
+print("▓   ▓ ▓   ▓ ▓   ▓ ▓   ▓      ▓   ▓ ▓   ▓ ▓   ▓ ▓       ▓      ▓     ▓   ▓ ▓     ▓     ")
+print("▓▓▓▓  ▓   ▓ ▓▓▓▓  ▓   ▓ ▓▓▓▓ ▓▓▓▓  ▓   ▓ ▓▓▓▓▓  ▓▓▓    ▓      ▓     ▓▓▓▓▓ ▓▓▓▓  ▓▓▓▓  ")
+print("▓  ▓  ▓   ▓ ▓   ▓ ▓   ▓      ▓  ▓  ▓   ▓ ▓   ▓     ▓   ▓      ▓     ▓   ▓ ▓     ▓     ")
+print("▓   ▓  ▓▓▓  ▓▓▓▓   ▓▓▓       ▓   ▓  ▓▓▓  ▓   ▓ ▓▓▓▓    ▓       ▓▓▓  ▓   ▓ ▓     ▓▓▓▓▓ ")
+print("")
 
 # welcome them to cafe and ask for name
 
